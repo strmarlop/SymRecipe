@@ -29,6 +29,13 @@ class Ingredient
     #[Assert\NotNull]
     private ?\DateTimeImmutable $createdAt = null;
 
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
